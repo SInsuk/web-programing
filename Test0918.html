@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <title>새로고침</title>
+    </head>
+    <body>
+        <!-- <h1>새로고침 해보세요</h1>
+        <script>
+            function random(number){
+                return Math.floor(Math.random()*number);
+            }
+
+            function bgChange(){
+                const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+                document.body.style.backgroundColor = rndCol;
+            }
+
+            bgChange();
+        </script> -->
+
+        <h1>두 수를 입력받아 사칙 연산하기</h1>
+        <script>
+            let num1 = parseInt(prompt("첫 번째 숫자를 입력하세요"));
+            let num2 = parseInt(prompt("두 번째 숫자를 입력하세요"));
+
+            //결과 출력
+            alert(`
+            ${num1} + ${num2} = ${num1 + num2}
+            ${num1} - ${num2} = ${num1 - num2}
+            ${num1} * ${num2} = ${num1 * num2}
+            ${num1} / ${num2} = ${num1 / num2}`)
+
+        </script>
+    </body>
+</html>

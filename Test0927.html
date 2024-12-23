@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4장 함수연습</title>
+</head>
+<body>
+    <h1>4장 연습</h1>
+    <h3>두수를 곱셈</h3>
+
+    <script>
+        //두 수를 인수로 받아서 곱한 결과를 반환
+        function multiple(a,b){
+            return a * b;
+        }
+
+        document.write(`두 수를 곱한 결과는 ${multiple(10, 20)}`);
+    </script>
+
+    <hr>
+    <br><br>
+
+    <h3>즉시 실행 함수</h3>
+    <script>
+        (function(a,b){
+            let sum = a+b;
+            document.write(`즉시 실행 함수 실행 결과: ${sum}`)
+        }(100, 200));
+    </script>
+
+    <hr>
+    <h3>화살표 함수</h3>
+    <script>
+        let num = (a, b) => {
+            let sum = a+b;
+            document.write(`화살표 함수 실행 결과: ${sum}`);
+        }
+        num(100, 200);
+    </script>
+
+    <hr><br><br>
+    <h3>콜 백 함수</h3>
+    <button>버튼</button>
+    <script>
+        const bttn = document.querySelector("button"); //버튼 요소 가져옴
+
+        function display() {
+            alert("버튼을 클릭했습니다. 잘 했어요!");
+        }
+
+        bttn.addEventListener("click", display); //버튼 클릭하면 display함수
+    </script>
+
+    <hr><br><br>
+    <h3>나머지 매개변수</h3>
+    <script>
+        function addnum(...nums){
+            let sum = 0;
+            for (let num of nums){  //let num in nums
+                sum += num;         //sum += nums[num]; 이런 방식도 가능함
+            }
+            return sum;
+        }
+
+        document.write(`addnum(1,2,3,4,5): ${addnum(1,2,3,4,5)} <br>`)
+        document.write(`addnum(1,2,3,4,5,6,7,8,9): ${addnum(1,2,3,4,5,6,7,8,9,)}`);
+    </script>
+</body>
+</html>
