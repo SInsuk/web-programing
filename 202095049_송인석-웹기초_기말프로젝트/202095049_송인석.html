@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>202095049_송인석_텀프로젝트 과제</title>
+    <style>
+        .map, .map * {margin:0;padding:0;font-family:'Malgun Gothic',dotum,'돋움',sans-serif;font-size:12px;}
+        .map {position:relative;width:100%;height:500px;}
+
+        #placesList .item {position:relative;border-bottom:1px solid #888;overflow: hidden;cursor: pointer;}
+        #placesList .item span {display: block;margin-top:4px;}
+
+        #pagination {margin:10px auto;text-align: center;}
+        #pagination a {display:inline-block;margin-right:10px;}
+    </style>
+</head>
+<body>
+<div class="map">
+    <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
+
+    <div id="menu" class="bg_white">
+        <div class="option">
+            <div>
+                <form onsubmit="searchPlaces(); return false;">
+                    키워드 : <input type="text" value="부산" id="keyword" size="15"> 
+                    <button type="submit">검색하기</button> 
+                </form>
+            </div>
+        </div>
+        <hr>
+        <ul id="placesList"></ul>
+        <div id="pagination"></div>
+    </div>
+</div>
+
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8487c0d5155ddb98dae5e8aac5e8acd2&libraries=services"></script>
+<script src="202095049_송인석.js"></script>
+</body>
+</html>
